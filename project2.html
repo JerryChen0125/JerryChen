@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Arduino</title>
+</head>
+<body>
+<body style="background-color:#fffbf5; font-family:Arial, sans-serif; color:#2c2c2c;">
+  <!-- 頁首區 -->
+  <div style="text-align:left; font-size:24px; font-weight:bold;">
+    <a href="index.html" style="color: inherit; text-decoration: none;">JerryChen</a>&nbsp&nbsp
+    <span style="font-size:18px; font-weight:normal;">
+      <a href="index.html" style="color: #737373; font-size:20px; font-weight:bold; text-decoration: none;">Home</a>&nbsp  
+      <a href="aboutme.html" style="color:#737373; font-size:20px; font-weight:bold; text-decoration:none;">About Me</a>&nbsp&nbsp 
+      <a href="mywork.html" style="color:inherit; font-size:20px; font-weight:bold; text-decoration:none;">My work</a>
+    </span>
+  </div>
+  <hr style="background-color:#2c2c2c; width:55%; float:left;">
+  
+  	<!-- 標題 -->
+  <h1 style="font-size:28px; font-weight:bold;">Arduino robot</h1>
+  <img src="picture/robot.png" width="1000" height="400" background-repeat="no-repeat" background-position="center" />
+  
+  <!-- 動機 -->
+  <div style="width:100%; text-align:left;">
+  <div style="width:55%; text-align:left;">
+      <p style="font-size:30px; font-weight:bold;">影像辨識手臂</p>
+      <h2>motivation</h2>
+      <p>在近期幾年AI進步迅速的年代下，工業上機械手臂的運用也在迅速發展，我們想要多了解它的運作方式以及學習一些硬體的知識，
+	  所以這次使用了Arduino來當作入門。</p>
+    </div>
+  </div>
+	<br/>
+  
+  <!-- 開發 -->
+    <div style="width:100%; text-align:left;">
+  <div style="width:55%; text-align:left;">
+      <h2>Development</h2>
+      <p>使用Arduino來做開發使用，類似C/C++的語言，還有撰寫一個自動化的python腳本，當鏡頭偵測到紅色的比例超過一定比例後，
+	  就會執行一段可自行調整的連續動作，此為初階段的測試，未來的成長可以透過yolo模型來達到多樣化的辨識。
+	  </p>
+    </div>
+  </div>
+  <br/>
+  <!-- 使用過程 -->
+    <div style="width:100%; text-align:left;">
+  <div style="width:55%; text-align:left;">
+      <h2>Process</h2>
+      <p>首先我們是自己組裝手工製作的機械手臂，利用冰棒棍多少會有誤差，以下是所有材料：</p>
+	  <ul>
+        <li>冰棒棍一包</li>
+		<li>伺服馬達*3 (MG996R 180度)</li>
+		<li>伺服馬達*1 (SG90 180度)</li>
+		<li>Arduino Uno</li>
+		<li>ESP32-CAM</li>
+		<li>杜邦線</li>
+		<li>電池盒(4顆3號電池)</li>
+      </ul>
+	  <p>
+	  1. 先用Tinkercad來先預置模型，方便後面組裝</p>
+	  <img src="picture/thinkercad.png" width="300" /><br/>
+	  <p>
+	  2. 有了建置好的模型，就能將冰棒棍組成做好的模樣，利用電鑽鑽孔還有熱熔膠做黏著</p>
+	  <img src="picture/robot.jpg" width="200" /><img src="picture/catch.jpg" width="200" /><br/>
+	  <p>
+	  3. 製作完手臂的本體就可以開始測試程式了，我們用python連接Arduino Uno做了一個UI視窗，裡面可以調整手臂的旋轉角度，以及製作腳本</p>
+	  <video width="640" height="360" controls>
+	  <source src="picture/robot.mp4" type="video/mp4">
+	  </video>
+	  <br/>
+	  4. 最後只需要編寫ESP32裡的執行規則，只需要偵測到就回傳訊號給python，然後在接著將傳訊號給Arduino Uno就沒問題了
+	  <br/>
+    </div>
+  </div>
+  
+  <!-- 返回首頁 -->
+  <div style="text-align:center;">
+    <a href="index.html" style="text-decoration:none;">
+      <img src="picture/Home.png" width="40" />
+    </a>
+  </div>
+  <br/>
+  
+</body>
+</html>
