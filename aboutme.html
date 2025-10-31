@@ -3,84 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <title>About me</title>
+  <link rel="icon" href="picture/pkc.png" type="image/png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbf5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* 導覽列 */
+    #navbar {
+      width: 65%;
+      margin: 0 auto;
+      font-size: 20px;
+      font-weight: bold;
+      border-collapse: collapse;
+    }
+
+    #navbar td {
+      vertical-align: middle;
+      padding: 8px 0;
+    }
+
+    #navbar-left {
+      text-align: left;
+      width: 30%;
+    }
+
+    #navbar-right {
+      text-align: right;
+      width: 70%;
+      font-weight: normal;
+    }
+
+    #navbar a {
+      color: #737373;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    #navbar a:first-child {
+      color: inherit;
+    }
+
+    hr {
+      background-color: #2c2c2c;
+      height: 2px;
+      border: none;
+      margin: 5px auto;
+      width: 66%;
+    }
+
+    /* 主要內容 */
+    #intro {
+      margin: 20px auto;
+      width: 80%;
+      text-align: center;
+    }
+
+    #intro img {
+      vertical-align: top;
+    }
+
+    #intro-info {
+      display: inline-block;
+      width: 30%;
+      text-align: left;
+      vertical-align: top;
+      margin-left: 100px;
+    }
+
+    #intro-text {
+      width: 55%;
+      margin: 20px auto;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    /* 表格置中 */
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    table td {
+      vertical-align: top;
+      text-align: center;
+      padding: 5px;
+    }
+
+    table img {
+      max-width: 100%;
+    }
+
+    /* 興趣 */
+    #hobbies table {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    #hobbies td {
+      text-align: center;
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    /* 返回首頁 */
+    #back-home {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+  </style>
 </head>
-<body style="background-color:#fffbf5; font-family:Arial, sans-serif; color:#2c2c2c;">
+<body>
 
-	<!-- 首頁 -->
-  <table style="width:100%; font-size:20px; font-weight:bold;">
-  <tr>
-    <!-- 左側：網站名稱 -->
-    <td style="text-align:left; width:30%;">
-      <a href="index.html" style="color: inherit; text-decoration: none;">JerryChen</a>
-    </td>
+  <!-- 導覽列 -->
+  <table id="navbar">
+    <tr>
+      <td id="navbar-left">
+        <a href="index.html">JerryChen</a>
+      </td>
+      <td id="navbar-right">
+        <a href="index.html" style="color:#737373;">Home</a>
+        <a href="aboutme.html" style="color:inherit;">About Me</a>
+        <a href="mywork.html" style="color:#737373;">My work</a>
+      </td>
+    </tr>
+  </table>
 
-    <!-- 右側：導覽連結 -->
-    <td style="text-align:right; width:70%; font-weight:normal;">
-      <a href="index.html" style="color: #737373; font-size:20px; font-weight:bold; text-decoration: none;">Home</a>&nbsp;&nbsp;
-      <a href="aboutme.html" style="color:inherit; font-size:20px; font-weight:bold; text-decoration:none;">About Me</a>&nbsp;&nbsp;
-      <a href="mywork.html" style="color:#737373; font-size:20px; font-weight:bold; text-decoration:none;">My work</a>
-    </td>
-  </tr>
-</table>
+  <hr>
 
-<hr style="background-color:#2c2c2c; margin-top:5px;">
-
-  
   <!-- 標題 -->
-  <h1 style="font-size:28px; font-weight:bold;">Introduction</h1>
- 
+  <h1>Introduction</h1>
+
   <!-- 自我介紹 -->
-  <div style="display:inline-block; width:15%;">
-  <img src="picture/me.jpg" width="200" background-repeat="no-repeat" background-position="center" />
-	</div>
-	<div style="display:inline-block; width:30%;">
-  <p style="font-size:18px; position:relative; top:-100px;">姓名：陳章銓、JerryChen<br/>生日：2005/01/25<br/>出生：新北市</p>
-	</div>
-	<div style="width:100%; text-align:left;">
-  <div style="font-size:18px; width:55%; text-align:left;">
-      <p>我是一位夢想前往IT產業的資管系學生，平常喜歡運動騎著自行車到處跑對於很多運動都感興趣，遊戲也有著大大的熱衷，
-	  偶爾會玩一下Unity做做小遊戲，有著一顆小時候的遊戲夢。</p>
+  <div id="intro" >
+    <div style="display:inline-block; width:15%;">
+      <img src="picture/me.jpg" width="200" height="200" />
+    </div>
+    <div id="intro-info">
+      <p>姓名：陳章銓、JerryChen<br/>
+      生日：2005/01/25<br/>
+      出生：新北市</p>
+    </div>
+    <div id="intro-text">
+      <p>我是一位夢想前往IT產業的資管系學生，平常喜歡運動騎著自行車到處跑對於很多運動都感興趣，遊戲也有著大大的熱衷，偶爾會玩一下Unity做做小遊戲，有著一顆小時候的遊戲夢。</p>
     </div>
   </div>
+
   <!-- 學歷 -->
-  
-  <table style="width:40%;">
-  <tr>
-    <td><img src="picture/chs.jpg" width="270" /></td>
-    <td style="font-size:18px; text-align:center;"><strong>中和高中</strong><br/>滿滿的讀書還有還有日復一日的生活</td>
-  </tr>
-  <tr>
-    <td><img src="picture/ncnu.jpg" width="270" /></td>
-    <td style="font-size:18px; text-align:center;"><strong>暨南大學</strong><br/>在這裡真的很開心快樂結交了不少朋友</td>
-  </tr>
-	</table>
-  
-  
+  <table>
+    <tr>
+      <td><img src="picture/chs.jpg" width="270" /></td>
+      <td><strong>中和高中</strong><br/>滿滿的讀書還有還有日復一日的生活</td>
+    </tr>
+    <tr>
+      <td><img src="picture/ncnu.jpg" width="270" /></td>
+      <td><strong>暨南大學</strong><br/>在這裡真的很開心快樂結交了不少朋友</td>
+    </tr>
+  </table>
+
   <!-- 興趣 -->
+  <div id="hobbies">
+    <table>
+      <tr>
+        <td>
+          <p style="font-weight:bold;">自行車</p>
+          <img src="picture/bike.jpg" width="240" />
+        </td>
+        <td>
+          <p style="font-weight:bold;">空拍</p>
+          <img src="picture/fly.jpg" width="270" />
+        </td>
+        <td>
+          <p style="font-weight:bold;">爬山</p>
+          <img src="picture/mou.jpg" width="260" />
+        </td>
+      </tr>
+      <tr>
+        <td>從小耳濡目染騎著車到處跑很舒服</td>
+        <td>我國中畢業的禮物讓我有一個空拍夢!</td>
+        <td>以前很常跟家人到處走可惜腰傷後就沒辦法了</td>
+      </tr>
+    </table>
+  </div>
 
-	<table style="width:70%;">
-  <tr>
-    <td><p style="font-weight:bold;">自行車</p><img src="picture/bike.jpg" width="240" /></td>
-    <td><p style="font-weight:bold;">空拍</p><img src="picture/fly.jpg" width="270" /></td>
-	<td><p style="font-weight:bold;">爬山</p><img src="picture/mou.jpg" width="260" /></td>
-  </tr>
-  <tr>
-    <td>從小耳濡目染騎著車到處跑很舒服</td>
-    <td>我國中畢業的禮物讓我有一個空拍夢!</td>
-	<td>以前很常跟家人到處走可惜腰傷後就沒辦法了</td>
-  </tr>
-	</table>
-	<br/>
-
-
-  
-	
-	<!-- 返回首頁 -->
-  <div style="text-align:center;">
-    <a href="index.html" style="text-decoration:none;">
+  <!-- 返回首頁 -->
+  <div id="back-home">
+    <a href="index.html">
       <img src="picture/home.png" width="40" />
     </a>
   </div>
 
-  </body>
+</body>
 </html>

@@ -3,90 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <title>Arduino</title>
+  <link rel="icon" href="picture/pkc.png" type="image/png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbf5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+	/* 導覽列 */
+	#navbar {
+	width: 65%;                /* 導覽列寬度（可改成 70%、900px 等固定值） */
+	margin: 0 auto;            /* 水平置中 */
+	font-size: 20px;
+	font-weight: bold;
+	border-collapse: collapse; /* 消除表格間距 */
+	}
+
+	#navbar td {
+	vertical-align: middle;
+	padding: 8px 0;            /* 上下留一點距離，讓導覽列不太擠 */
+	}
+
+	#navbar-left {
+	text-align: left;
+	width: 30%;
+	}
+
+	#navbar-right {
+	text-align: right;
+	width: 70%;
+	font-weight: normal;
+	}
+
+	#navbar a {
+	color: #737373;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 10px;
+	}
+
+	#navbar a:first-child {
+	color: inherit;
+	}
+
+
+    hr {
+      background-color: #2c2c2c;
+      height: 2px;
+      border: none;
+      margin: 5px auto;
+	  width: 66%;
+    }
+
+    /* 標題區 */
+    #main-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* 區塊通用設定 */
+    #motivation, #development, #process {
+      width: 55%;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    #motivation p.title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    /* 返回首頁 */
+    #home-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-<body style="background-color:#fffbf5; font-family:Arial, sans-serif; color:#2c2c2c;">
-  	<!-- 首頁 -->
-  <table style="width:100%; font-size:20px; font-weight:bold;">
-  <tr>
-    <!-- 左側：網站名稱 -->
-    <td style="text-align:left; width:30%;">
-      <a href="index.html" style="color: inherit; text-decoration: none;">JerryChen</a>
-    </td>
 
-    <!-- 右側：導覽連結 -->
-    <td style="text-align:right; width:70%; font-weight:normal;">
-      <a href="index.html" style="color: #737373; font-size:20px; font-weight:bold; text-decoration: none;">Home</a>&nbsp;&nbsp;
-      <a href="aboutme.html" style="color:#737373; font-size:20px; font-weight:bold; text-decoration:none;">About Me</a>&nbsp;&nbsp;
-      <a href="mywork.html" style="color:inherit; font-size:20px; font-weight:bold; text-decoration:none;">My work</a>
-    </td>
-  </tr>
-</table>
+  <!-- 首頁導覽列 -->
+  <table id="navbar">
+    <tr>
+      <td id="navbar-left">
+        <a href="index.html">JerryChen</a>
+      </td>
+      <td id="navbar-right">
+        <a href="index.html" style="color:#737373;">Home</a>
+        <a href="aboutme.html" style="color:#737373;">About Me</a>
+        <a href="mywork.html" style="color:inherit;">My work</a>
+      </td>
+    </tr>
+  </table>
 
-<hr style="background-color:#2c2c2c; margin-top:5px;">
-  	<!-- 標題 -->
-  <h1 style="font-size:28px; font-weight:bold;">Arduino robot</h1>
-  <img src="picture/robot.png" width="1000" height="400" background-repeat="no-repeat" background-position="center" />
-  
+  <hr>
+
+  <!-- 標題 -->
+  <h1 id="main-title">Arduino robot</h1>
+  <img src="picture/robot.png" width="1000" height="400" style="display:block; margin:auto;" />
+
   <!-- 動機 -->
-  <div style="width:100%; text-align:left;">
-  <div style="width:55%; text-align:left;">
-      <p style="font-size:30px; font-weight:bold;">影像辨識手臂</p>
-      <h2>motivation</h2>
-      <p>在近期幾年AI進步迅速的年代下，工業上機械手臂的運用也在迅速發展，我們想要多了解它的運作方式以及學習一些硬體的知識，
-	  所以這次使用了Arduino來當作入門。</p>
-    </div>
+  <div id="motivation">
+    <p class="title">影像辨識手臂</p>
+    <h2>Motivation</h2>
+    <p>
+      在近期幾年AI進步迅速的年代下，工業上機械手臂的運用也在迅速發展，
+      我們想要多了解它的運作方式以及學習一些硬體的知識，
+      所以這次使用了Arduino來當作入門。
+    </p>
   </div>
-	<br/>
-  
+
   <!-- 開發 -->
-    <div style="width:100%; text-align:left;">
-  <div style="width:55%; text-align:left;">
-      <h2>Development</h2>
-      <p>使用Arduino來做開發使用，類似C/C++的語言，還有撰寫一個自動化的python腳本，當鏡頭偵測到紅色的比例超過一定比例後，
-	  就會執行一段可自行調整的連續動作，此為初階段的測試，未來的成長可以透過yolo模型來達到多樣化的辨識。
-	  </p>
-    </div>
+  <div id="development">
+    <h2>Development</h2>
+    <p>
+      使用Arduino來做開發使用，類似C/C++的語言，
+      還有撰寫一個自動化的python腳本，當鏡頭偵測到紅色的比例超過一定比例後，
+      就會執行一段可自行調整的連續動作，此為初階段的測試，
+      未來的成長可以透過yolo模型來達到多樣化的辨識。
+    </p>
   </div>
-  <br/>
+
   <!-- 使用過程 -->
-    <div style="width:100%; text-align:left;">
-  <div style="width:55%; text-align:left;">
-      <h2>Process</h2>
-      <p>首先我們是自己組裝手工製作的機械手臂，利用冰棒棍多少會有誤差，以下是所有材料：</p>
-	  <ul>
-        <li>冰棒棍一包</li>
-		<li>伺服馬達*3 (MG996R 180度)</li>
-		<li>伺服馬達*1 (SG90 180度)</li>
-		<li>Arduino Uno</li>
-		<li>ESP32-CAM</li>
-		<li>杜邦線</li>
-		<li>電池盒(4顆3號電池)</li>
-      </ul>
-	  <p>
-	  1. 先用Tinkercad來先預置模型，方便後面組裝</p>
-	  <img src="picture/thinkercad.png" width="300" /><br/>
-	  <p>
-	  2. 有了建置好的模型，就能將冰棒棍組成做好的模樣，利用電鑽鑽孔還有熱熔膠做黏著</p>
-	  <img src="picture/robot.jpg" width="200" /><img src="picture/catch.jpg" width="200" /><br/>
-	  <p>
-	  3. 製作完手臂的本體就可以開始測試程式了，我們用python連接Arduino Uno做了一個UI視窗，裡面可以調整手臂的旋轉角度，以及製作腳本</p>
-	  <video width="640" height="360" controls>
-	  <source src="picture/robot.mp4" type="video/mp4">
-	  </video>
-	  <br/>
-	  4. 最後只需要編寫ESP32裡的執行規則，只需要偵測到就回傳訊號給python，然後在接著將傳訊號給Arduino Uno就沒問題了
-	  <br/>
-    </div>
+  <div id="process">
+    <h2>Process</h2>
+    <p>首先我們是自己組裝手工製作的機械手臂，利用冰棒棍多少會有誤差，以下是所有材料：</p>
+    <ul>
+      <li>冰棒棍一包</li>
+      <li>伺服馬達*3 (MG996R 180度)</li>
+      <li>伺服馬達*1 (SG90 180度)</li>
+      <li>Arduino Uno</li>
+      <li>ESP32-CAM</li>
+      <li>杜邦線</li>
+      <li>電池盒(4顆3號電池)</li>
+    </ul>
+    <p>1. 先用Tinkercad來先預置模型，方便後面組裝</p>
+    <img src="picture/thinkercad.png" width="300" /><br/>
+    <p>2. 有了建置好的模型，就能將冰棒棍組成做好的模樣，利用電鑽鑽孔還有熱熔膠做黏著</p>
+    <img src="picture/robot.jpg" width="200" />
+    <img src="picture/catch.jpg" width="200" /><br/>
+    <p>3. 製作完手臂的本體就可以開始測試程式了，我們用python連接Arduino Uno做了一個UI視窗，裡面可以調整手臂的旋轉角度，以及製作腳本</p>
+    <video width="640" height="360" controls>
+      <source src="picture/robot.mp4" type="video/mp4">
+    </video>
+    <br/>
+    4. 最後只需要編寫ESP32裡的執行規則，只需要偵測到就回傳訊號給python，然後再將訊號傳給Arduino Uno就沒問題了
   </div>
-  
+
   <!-- 返回首頁 -->
-  <div style="text-align:center;">
+  <div id="home-button">
     <a href="index.html" style="text-decoration:none;">
       <img src="picture/home.png" width="40" />
     </a>
   </div>
-  <br/>
-  
+
 </body>
 </html>
