@@ -25,15 +25,19 @@
     font-size: 24px;
     font-weight: bold;
   }
+
   #header a {
     color: inherit;
     text-decoration: none;
   }
+
+  /* 導覽列連結區 */
   #nav-links {
     float: right;
     font-size: 18px;
     font-weight: normal;
   }
+
   #nav-links a {
     color: #737373;
     font-size: 20px;
@@ -41,9 +45,10 @@
     text-decoration: none;
     margin-left: 10px;
   }
-  #nav-links a:first-child {
-    color: inherit; /* 或根據需要指定 */
+	#nav-links a:first-child {
+    color: inherit;
   }
+
 
   /* 分隔線 */
   #line {
@@ -60,29 +65,16 @@
   }
 
   /* 個人資料區 */
-  #personal-info-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  #personal-photo {
-    width: 40%;
-    text-align: center;
-    vertical-align: top;
-  }
-  #photo-box {
-    background-color: #fffbf5;
-    width: 300px;
-    padding: 10px;
-    margin: auto;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-  }
   #personal-text {
     width: 60%;
     text-align: left;
     vertical-align: top;
-    padding-left: 20px;
+    padding: 20px;  
+  /* 新增白色圓角框效果 */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 20px;
   }
   #personal-text p.name {
     color: #38b6ff;
@@ -90,6 +82,19 @@
     font-weight: bold;
     margin: 0;
   }
+  #hope {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  #photo-box { 
+	background-color: #fffbf5; 
+	width: 300px; 
+	padding: 10px; 
+	text-align: left; 
+	font-size: 18px; 
+	font-weight: bold; 
+  }
+
 
   /* 技能區 */
   #skills {
@@ -220,6 +225,7 @@
     border-color: orange;             /* 邊框變橘 */
     box-shadow: 0 0 8px rgba(255,165,0,0.6); /* 加上柔光 */
   }
+  
 
 </style>
 </head>
@@ -228,7 +234,7 @@
 
   <!-- 頁首區 -->
   <div id="header">
-    <a href="index.html">JerryChen</a>
+    <a href="index.html" >JerryChen</a>
     <span id="nav-links">
       <a href="index.html">Home</a>
       <a href="aboutme.html" style="color:#737373;">About Me</a>
@@ -262,16 +268,19 @@
       </td>
 
       <!-- 右側：自我介紹文字 -->
-      <td id="personal-text">
-        <p class="name">Hi, my name is JerryChen</p>
-        <p>還在就讀大學的學生，喜歡挑戰困難增進自己！</p>
-        <p>對於有興趣的事情非常地投入，有時喜歡待在舒適圈，有時會想挑戰各種困難，是個奇怪的水瓶座
-          <img src="picture/aquarius.png" height="50" width="50">
-        </p>
-        <p>把各種學到的經驗運用在未來的生活，讓自己過得充實。</p>
-      </td>
-    </tr>
-  </table>
+    <td id="personal-text">
+      <p class="name">Hi, my name is JerryChen</p>
+      <p>還在就讀大學的學生，喜歡挑戰困難增進自己！</p>
+      <p>
+        對於有興趣的事情非常地投入，有時喜歡待在舒適圈，有時會想挑戰各種困難，是個奇怪的水瓶座
+        <img src="picture/aquarius.png" height="50" width="50">
+      </p>
+      <br><br>
+      <p id="hope">「把各種學到的經驗運用在未來的生活</p>
+      <p id="hope" style="padding-left:270px;">讓自己過得充實~」</p>
+    </td>
+  </tr>
+</table>
 
   <hr id="line">
 
