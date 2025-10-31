@@ -54,7 +54,7 @@
   }
 
   /* 標題 */
-  #personal-title, #experience-title, #competition-title {
+  #personal, #ex, #competition, #skill {
     font-size: 28px;
     font-weight: bold;
   }
@@ -176,6 +176,51 @@
     width: 40px;
     height: 40px;
   }
+  
+  a {
+	text-decoration:none;
+  }
+  /* 移除預設樣式 */
+	#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	line-height:40px;
+    text-align: center; /* 讓整排置中 */
+  }
+  
+  #menu li {
+  margin-bottom: 12px;
+  }
+
+  #menu {
+	position: absolute;
+	/* top right bottom right */
+	right: 40px;
+  }
+
+  /* 按鈕樣式 */
+  #menu li a {
+    display: block;
+    width: 125px;
+    padding: 5px 0;
+    background-color: #737373;        /* 深灰底 */
+    border: 2px solid #737373;        /* 同色邊框 */
+    border-radius: 10px;              /* 圓角邊框 */
+    color: ivory;                     /* 文字顏色 */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;        /* 動畫過渡 */
+  }
+
+  /* 滑過效果 */
+  #menu li a:hover {
+    background-color: ivory;          /* 底色變亮 */
+    color: orange;                    /* 文字變橘 */
+    border-color: orange;             /* 邊框變橘 */
+    box-shadow: 0 0 8px rgba(255,165,0,0.6); /* 加上柔光 */
+  }
+
 </style>
 </head>
 <body>
@@ -191,9 +236,19 @@
     </span>
   </div>
   <hr id="line">
+  
+  <!-- 選單 -->
+  <div id="menu">
+	<ul>
+		<li><a href="#personal">介紹</a></li>
+		<li><a href="#skill">技能</a></li>
+		<li><a href="#ex">經驗</a></li>
+		<li><a href="#competition">競賽</a></li>
+		</ul>
+	</div>
 
   <!-- 個人資料 -->
-  <h2 id="personal-title">個人資料</h2>
+  <h2 id="personal">個人資料</h2>
 
   <table id="personal-info-table">
     <tr>
@@ -223,7 +278,7 @@
   <!-- 技能區 -->
   <div id="skills">
     <div id="skills-list">
-      <h3>Programming Skills</h3>
+      <h3 id="skill">Programming Skills</h3>
 
       <p class="skill-name">HTML / CSS / JavaScript</p>
       <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:65%;"></div></div>
@@ -244,6 +299,7 @@
 
   <!-- 經驗區 -->
   <div id="experience">
+  <h3 id="ex">Experience</h3>
     <!-- 第一項 -->
     <div class="exp-item">
       <div class="exp-line"></div>
@@ -307,7 +363,7 @@
   </div>
 
   <!-- Competition -->
-  <h2 id="competition-title">Competition experience</h2>
+  <h2 id="competition">Competition experience</h2>
   <p>2024 雲湧智生：臺灣生成式AI應用黑客松競賽</p>
   <p>2025 雲湧智生：臺灣生成式AI應用黑客松競賽</p>
 
